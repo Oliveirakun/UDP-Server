@@ -20,7 +20,7 @@ public class UDPServerTest {
 		DatagramSocket socketMock = mock(DatagramSocket.class);
 		
 		//Mockito cant mock the DatagramPacket class
-		DatagramPacket message = new DatagramPacket(new byte[1024],1024);
+		DatagramPacket message = new DatagramPacket(new byte[256],256);
 		
 //		Server serverMock = mock(UDPServer.class);
 		Server server = new UDPServer(socketMock, message);

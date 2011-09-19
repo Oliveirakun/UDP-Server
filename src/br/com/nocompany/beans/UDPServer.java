@@ -23,10 +23,13 @@ public class UDPServer implements Server {
 	@Override
 	public void start() throws IOException {
 
-		System.out.println("Server started....");
-		server.receive(message);
-		threatMessage();		
-		
+		//Infinite loop
+		while(true) {
+			
+			System.out.println("Server started....");
+			server.receive(message);
+			threatMessage();		
+		}
 	}
 
 	@Override
